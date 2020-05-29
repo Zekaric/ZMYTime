@@ -5,197 +5,206 @@
     xmlns:d     ="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc    ="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:local ="clr-namespace:ZMuse"
+    xmlns:i     ="http://schemas.microsoft.com/expression/2010/interactivity"
     mc:Ignorable="d"
-    Title       ="Zekaric : Muse"
-    Height      ="342.772"
-    Width       ="600">
+    Title       ="Zekaric : MYTime"
+    Height      ="339.772"
+    Width       ="422">
 
-   <Border Margin="6">
-      <Grid>
-         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="auto"/>
-            <ColumnDefinition Width="auto"/>
-         </Grid.ColumnDefinitions>
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Closing">
+            <i:InvokeCommandAction Command="{Binding CmdCloseApp}" />
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
 
-         <Grid.RowDefinitions>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="*"/>
-         </Grid.RowDefinitions>
+    <Border Margin="6">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
 
-         <TextBox    Grid.Column="0" Grid.Row=" 0" Margin="2,2,2,2" Text="{Binding Task1Name}" VerticalAlignment="Center" Padding="2"/>
-         <TextBlock  Grid.Column="1" Grid.Row=" 0" Margin="2,2,2,2" Text="{Binding Task1Time}" VerticalAlignment="Center" />
-         <Button     Grid.Column="2" Grid.Row=" 0" Margin="2,2,2,2" Command="{Binding CmdTask1Start}">
-            <Image>
-               <Image.Style>
-                  <Style TargetType="Image">
-                     <Setter Property="Source" Value="../Resource/pause.png"/>
-                     <Style.Triggers>
-                        <DataTrigger Binding="{Binding CurrentTask}" Value="0">
-                           <Setter Property="Source" Value="../Resource/play.png"/>
-                        </DataTrigger>
-                     </Style.Triggers>
-                  </Style>
-               </Image.Style>
-            </Image>
-         </Button>
-         <TextBox    Grid.Column="0" Grid.Row=" 1" Margin="2,2,2,2" Text="{Binding Task2Name}" VerticalAlignment="Center" Padding="2"/>
-         <TextBlock  Grid.Column="1" Grid.Row=" 1" Margin="2,2,2,2" Text="{Binding Task2Time}" VerticalAlignment="Center" />
-         <Button     Grid.Column="2" Grid.Row=" 1" Margin="2,2,2,2" Command="{Binding CmdTask2Start}">
-            <Image>
-               <Image.Style>
-                  <Style TargetType="Image">
-                     <Setter Property="Source" Value="../Resource/pause.png"/>
-                     <Style.Triggers>
-                        <DataTrigger Binding="{Binding CurrentTask}" Value="0">
-                           <Setter Property="Source" Value="../Resource/play.png"/>
-                        </DataTrigger>
-                     </Style.Triggers>
-                  </Style>
-               </Image.Style>
-            </Image>
-         </Button>
-         <TextBox    Grid.Column="0" Grid.Row=" 2" Margin="2,2,2,2" Text="{Binding Task3Name}" VerticalAlignment="Center" Padding="2"/>
-         <TextBlock  Grid.Column="1" Grid.Row=" 2" Margin="2,2,2,2" Text="{Binding Task3Time}" VerticalAlignment="Center" />
-         <Button     Grid.Column="2" Grid.Row=" 2" Margin="2,2,2,2" Command="{Binding CmdTask3Start}">
-            <Image>
-               <Image.Style>
-                  <Style TargetType="Image">
-                     <Setter Property="Source" Value="../Resource/pause.png"/>
-                     <Style.Triggers>
-                        <DataTrigger Binding="{Binding CurrentTask}" Value="0">
-                           <Setter Property="Source" Value="../Resource/play.png"/>
-                        </DataTrigger>
-                     </Style.Triggers>
-                  </Style>
-               </Image.Style>
-            </Image>
-         </Button>
-         <TextBox    Grid.Column="0" Grid.Row=" 3" Margin="2,2,2,2" Text="{Binding Task4Name}" VerticalAlignment="Center" Padding="2"/>
-         <TextBlock  Grid.Column="1" Grid.Row=" 3" Margin="2,2,2,2" Text="{Binding Task4Time}" VerticalAlignment="Center" />
-         <Button     Grid.Column="2" Grid.Row=" 3" Margin="2,2,2,2" Command="{Binding CmdTask4Start}">
-            <Image>
-               <Image.Style>
-                  <Style TargetType="Image">
-                     <Setter Property="Source" Value="../Resource/pause.png"/>
-                     <Style.Triggers>
-                        <DataTrigger Binding="{Binding CurrentTask}" Value="0">
-                           <Setter Property="Source" Value="../Resource/play.png"/>
-                        </DataTrigger>
-                     </Style.Triggers>
-                  </Style>
-               </Image.Style>
-            </Image>
-         </Button>
-         <TextBox    Grid.Column="0" Grid.Row=" 4" Margin="2,2,2,2" Text="{Binding Task5Name}" VerticalAlignment="Center" Padding="2"/>
-         <TextBlock  Grid.Column="1" Grid.Row=" 4" Margin="2,2,2,2" Text="{Binding Task5Time}" VerticalAlignment="Center" />
-         <Button     Grid.Column="2" Grid.Row=" 4" Margin="2,2,2,2" Command="{Binding CmdTask5Start}">
-            <Image>
-               <Image.Style>
-                  <Style TargetType="Image">
-                     <Setter Property="Source" Value="../Resource/pause.png"/>
-                     <Style.Triggers>
-                        <DataTrigger Binding="{Binding CurrentTask}" Value="0">
-                           <Setter Property="Source" Value="../Resource/play.png"/>
-                        </DataTrigger>
-                     </Style.Triggers>
-                  </Style>
-               </Image.Style>
-            </Image>
-         </Button>
-         <TextBox    Grid.Column="0" Grid.Row=" 5" Margin="2,2,2,2" Text="{Binding Task6Name}" VerticalAlignment="Center" Padding="2"/>
-         <TextBlock  Grid.Column="1" Grid.Row=" 5" Margin="2,2,2,2" Text="{Binding Task6Time}" VerticalAlignment="Center" />
-         <Button     Grid.Column="2" Grid.Row=" 5" Margin="2,2,2,2" Command="{Binding CmdTask6Start}">
-            <Image>
-               <Image.Style>
-                  <Style TargetType="Image">
-                     <Setter Property="Source" Value="../Resource/pause.png"/>
-                     <Style.Triggers>
-                        <DataTrigger Binding="{Binding CurrentTask}" Value="0">
-                           <Setter Property="Source" Value="../Resource/play.png"/>
-                        </DataTrigger>
-                     </Style.Triggers>
-                  </Style>
-               </Image.Style>
-            </Image>
-         </Button>
-         <TextBox    Grid.Column="0" Grid.Row=" 6" Margin="2,2,2,2" Text="{Binding Task7Name}" VerticalAlignment="Center" Padding="2"/>
-         <TextBlock  Grid.Column="1" Grid.Row=" 6" Margin="2,2,2,2" Text="{Binding Task7Time}" VerticalAlignment="Center" />
-         <Button     Grid.Column="2" Grid.Row=" 6" Margin="2,2,2,2" Command="{Binding CmdTask7Start}">
-            <Image>
-               <Image.Style>
-                  <Style TargetType="Image">
-                     <Setter Property="Source" Value="../Resource/pause.png"/>
-                     <Style.Triggers>
-                        <DataTrigger Binding="{Binding CurrentTask}" Value="0">
-                           <Setter Property="Source" Value="../Resource/play.png"/>
-                        </DataTrigger>
-                     </Style.Triggers>
-                  </Style>
-               </Image.Style>
-            </Image>
-         </Button>
-         <TextBox    Grid.Column="0" Grid.Row=" 7" Margin="2,2,2,2" Text="{Binding Task8Name}" VerticalAlignment="Center" Padding="2"/>
-         <TextBlock  Grid.Column="1" Grid.Row=" 7" Margin="2,2,2,2" Text="{Binding Task8Time}" VerticalAlignment="Center" />
-         <Button     Grid.Column="2" Grid.Row=" 7" Margin="2,2,2,2" Command="{Binding CmdTask8Start}">
-            <Image>
-               <Image.Style>
-                  <Style TargetType="Image">
-                     <Setter Property="Source" Value="../Resource/pause.png"/>
-                     <Style.Triggers>
-                        <DataTrigger Binding="{Binding CurrentTask}" Value="0">
-                           <Setter Property="Source" Value="../Resource/play.png"/>
-                        </DataTrigger>
-                     </Style.Triggers>
-                  </Style>
-               </Image.Style>
-            </Image>
-         </Button>
-         <TextBox    Grid.Column="0" Grid.Row=" 8" Margin="2,2,2,2" Text="{Binding Task9Name}" VerticalAlignment="Center" Padding="2"/>
-         <TextBlock  Grid.Column="1" Grid.Row=" 8" Margin="2,2,2,2" Text="{Binding Task9Time}" VerticalAlignment="Center" />
-         <Button     Grid.Column="2" Grid.Row=" 8" Margin="2,2,2,2" Command="{Binding CmdTask9Start}">
-            <Image>
-               <Image.Style>
-                  <Style TargetType="Image">
-                     <Setter Property="Source" Value="../Resource/pause.png"/>
-                     <Style.Triggers>
-                        <DataTrigger Binding="{Binding CurrentTask}" Value="0">
-                           <Setter Property="Source" Value="../Resource/play.png"/>
-                        </DataTrigger>
-                     </Style.Triggers>
-                  </Style>
-               </Image.Style>
-            </Image>
-         </Button>
-         <TextBox    Grid.Column="0" Grid.Row=" 9" Margin="2,2,2,2" Text="{Binding Task10Name}" VerticalAlignment="Center" Padding="2"/>
-         <TextBlock  Grid.Column="1" Grid.Row=" 9" Margin="2,2,2,2" Text="{Binding Task10Time}" VerticalAlignment="Center" />
-         <Button     Grid.Column="2" Grid.Row=" 9" Margin="2,2,2,2" Command="{Binding CmdTask10Start}">
-            <Image>
-               <Image.Style>
-                  <Style TargetType="Image">
-                     <Setter Property="Source" Value="../Resource/pause.png"/>
-                     <Style.Triggers>
-                        <DataTrigger Binding="{Binding CurrentTask}" Value="0">
-                           <Setter Property="Source" Value="../Resource/play.png"/>
-                        </DataTrigger>
-                     </Style.Triggers>
-                  </Style>
-               </Image.Style>
-            </Image>
-         </Button>
-         <Button     Grid.Column="2" Grid.Row="10" Margin="2,2,2,2" Command="{Binding CmdTaskStop}">
-            <Image Source="../Resource/stop.png"/>
-         </Button>
-      </Grid>
-   </Border>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <TextBox    Grid.Column="0" Grid.Row=" 0" Margin="2,2,2,2" Text="{Binding Task1Name, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" Padding="2"/>
+            <TextBlock  Grid.Column="1" Grid.Row=" 0" Margin="2,2,2,2" Text="{Binding Task1Time}" VerticalAlignment="Center" />
+            <Button     Grid.Column="2" Grid.Row=" 0" Margin="2,2,2,2" Command="{Binding CmdTask1Start}">
+                <Image>
+                    <Image.Style>
+                        <Style TargetType="Image">
+                            <Setter Property="Source" Value="../Resource/pause.png"/>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding CurrentTask}" Value="0">
+                                    <Setter Property="Source" Value="../Resource/play.png"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Image.Style>
+                </Image>
+            </Button>
+            <TextBox    Grid.Column="0" Grid.Row=" 1" Margin="2,2,2,2" Text="{Binding Task2Name, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" Padding="2"/>
+            <TextBlock  Grid.Column="1" Grid.Row=" 1" Margin="2,2,2,2" Text="{Binding Task2Time}" VerticalAlignment="Center" />
+            <Button     Grid.Column="2" Grid.Row=" 1" Margin="2,2,2,2" Command="{Binding CmdTask2Start}">
+                <Image>
+                    <Image.Style>
+                        <Style TargetType="Image">
+                            <Setter Property="Source" Value="../Resource/pause.png"/>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding CurrentTask}" Value="1">
+                                    <Setter Property="Source" Value="../Resource/play.png"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Image.Style>
+                </Image>
+            </Button>
+            <TextBox    Grid.Column="0" Grid.Row=" 2" Margin="2,2,2,2" Text="{Binding Task3Name, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" Padding="2"/>
+            <TextBlock  Grid.Column="1" Grid.Row=" 2" Margin="2,2,2,2" Text="{Binding Task3Time}" VerticalAlignment="Center" />
+            <Button     Grid.Column="2" Grid.Row=" 2" Margin="2,2,2,2" Command="{Binding CmdTask3Start}">
+                <Image>
+                    <Image.Style>
+                        <Style TargetType="Image">
+                            <Setter Property="Source" Value="../Resource/pause.png"/>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding CurrentTask}" Value="2">
+                                    <Setter Property="Source" Value="../Resource/play.png"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Image.Style>
+                </Image>
+            </Button>
+            <TextBox    Grid.Column="0" Grid.Row=" 3" Margin="2,2,2,2" Text="{Binding Task4Name, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" Padding="2"/>
+            <TextBlock  Grid.Column="1" Grid.Row=" 3" Margin="2,2,2,2" Text="{Binding Task4Time}" VerticalAlignment="Center" />
+            <Button     Grid.Column="2" Grid.Row=" 3" Margin="2,2,2,2" Command="{Binding CmdTask4Start}">
+                <Image>
+                    <Image.Style>
+                        <Style TargetType="Image">
+                            <Setter Property="Source" Value="../Resource/pause.png"/>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding CurrentTask}" Value="3">
+                                    <Setter Property="Source" Value="../Resource/play.png"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Image.Style>
+                </Image>
+            </Button>
+            <TextBox    Grid.Column="0" Grid.Row=" 4" Margin="2,2,2,2" Text="{Binding Task5Name, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" Padding="2"/>
+            <TextBlock  Grid.Column="1" Grid.Row=" 4" Margin="2,2,2,2" Text="{Binding Task5Time}" VerticalAlignment="Center" />
+            <Button     Grid.Column="2" Grid.Row=" 4" Margin="2,2,2,2" Command="{Binding CmdTask5Start}">
+                <Image>
+                    <Image.Style>
+                        <Style TargetType="Image">
+                            <Setter Property="Source" Value="../Resource/pause.png"/>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding CurrentTask}" Value="4">
+                                    <Setter Property="Source" Value="../Resource/play.png"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Image.Style>
+                </Image>
+            </Button>
+            <TextBox    Grid.Column="0" Grid.Row=" 5" Margin="2,2,2,2" Text="{Binding Task6Name, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" Padding="2"/>
+            <TextBlock  Grid.Column="1" Grid.Row=" 5" Margin="2,2,2,2" Text="{Binding Task6Time}" VerticalAlignment="Center" />
+            <Button     Grid.Column="2" Grid.Row=" 5" Margin="2,2,2,2" Command="{Binding CmdTask6Start}">
+                <Image>
+                    <Image.Style>
+                        <Style TargetType="Image">
+                            <Setter Property="Source" Value="../Resource/pause.png"/>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding CurrentTask}" Value="5">
+                                    <Setter Property="Source" Value="../Resource/play.png"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Image.Style>
+                </Image>
+            </Button>
+            <TextBox    Grid.Column="0" Grid.Row=" 6" Margin="2,2,2,2" Text="{Binding Task7Name, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" Padding="2"/>
+            <TextBlock  Grid.Column="1" Grid.Row=" 6" Margin="2,2,2,2" Text="{Binding Task7Time}" VerticalAlignment="Center" />
+            <Button     Grid.Column="2" Grid.Row=" 6" Margin="2,2,2,2" Command="{Binding CmdTask7Start}">
+                <Image>
+                    <Image.Style>
+                        <Style TargetType="Image">
+                            <Setter Property="Source" Value="../Resource/pause.png"/>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding CurrentTask}" Value="6">
+                                    <Setter Property="Source" Value="../Resource/play.png"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Image.Style>
+                </Image>
+            </Button>
+            <TextBox    Grid.Column="0" Grid.Row=" 7" Margin="2,2,2,2" Text="{Binding Task8Name, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" Padding="2"/>
+            <TextBlock  Grid.Column="1" Grid.Row=" 7" Margin="2,2,2,2" Text="{Binding Task8Time}" VerticalAlignment="Center" />
+            <Button     Grid.Column="2" Grid.Row=" 7" Margin="2,2,2,2" Command="{Binding CmdTask8Start}">
+                <Image>
+                    <Image.Style>
+                        <Style TargetType="Image">
+                            <Setter Property="Source" Value="../Resource/pause.png"/>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding CurrentTask}" Value="7">
+                                    <Setter Property="Source" Value="../Resource/play.png"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Image.Style>
+                </Image>
+            </Button>
+            <TextBox    Grid.Column="0" Grid.Row=" 8" Margin="2,2,2,2" Text="{Binding Task9Name, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" Padding="2"/>
+            <TextBlock  Grid.Column="1" Grid.Row=" 8" Margin="2,2,2,2" Text="{Binding Task9Time}" VerticalAlignment="Center" />
+            <Button     Grid.Column="2" Grid.Row=" 8" Margin="2,2,2,2" Command="{Binding CmdTask9Start}">
+                <Image>
+                    <Image.Style>
+                        <Style TargetType="Image">
+                            <Setter Property="Source" Value="../Resource/pause.png"/>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding CurrentTask}" Value="8">
+                                    <Setter Property="Source" Value="../Resource/play.png"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Image.Style>
+                </Image>
+            </Button>
+            <TextBox    Grid.Column="0" Grid.Row=" 9" Margin="2,2,2,2" Text="{Binding Task10Name, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" Padding="2"/>
+            <TextBlock  Grid.Column="1" Grid.Row=" 9" Margin="2,2,2,2" Text="{Binding Task10Time}" VerticalAlignment="Center" />
+            <Button     Grid.Column="2" Grid.Row=" 9" Margin="2,2,2,2" Command="{Binding CmdTask10Start}">
+                <Image>
+                    <Image.Style>
+                        <Style TargetType="Image">
+                            <Setter Property="Source" Value="../Resource/pause.png"/>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding CurrentTask}" Value="9">
+                                    <Setter Property="Source" Value="../Resource/play.png"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Image.Style>
+                </Image>
+            </Button>
+
+            <Button     Grid.Column="1" Grid.Row="10" Margin="2,2,2,2" Command="{Binding CmdTimeReset}" Content="Reset" />
+            <Button     Grid.Column="2" Grid.Row="10" Margin="2,2,2,2" Command="{Binding CmdTaskStop}">
+                <Image Source="../Resource/stop.png"/>
+            </Button>
+        </Grid>
+    </Border>
 </Window>

@@ -30,16 +30,5 @@ namespace ZMuse.View
             DataContext = 
                 _vm     = new MainWindowVM(this);
         }
-
-        // Not MVVM but currently no clean way to forward these to the VM.
-        private void LibraryListSelChange(Object sender, EventArgs e)
-        {
-            _vm.LibraryListSelChange(sender, e);
-        }
-        
-        private void PlayListSelChange(Object sender, EventArgs e)
-        {
-            _vm.PlayListSelChange(sender, e);
-        }
     }
 }
