@@ -23,7 +23,7 @@ namespace ZUtility
     /// <summary>
     /// 
     /// </summary>
-    public class MVVM_Command : ICommand
+    public class ZMVVM_Command : ICommand
     {
         // Delegate ///////////////////////////////////////////////////////////////////////////////
         // Public /////////////////////////////////////////////////////////////////////////////////
@@ -44,7 +44,7 @@ namespace ZUtility
         /// Constructor
         /// </summary>
         /// <param name="vm"></param>
-        public MVVM_Command(DelCanExecute canExecute, DelExecute execute)
+        public ZMVVM_Command(DelCanExecute canExecute, DelExecute execute)
         {
             this._canExecute = canExecute;
             this._execute    = execute;

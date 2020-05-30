@@ -70,19 +70,19 @@ namespace ZMuse.ViewModel
 
             this._SettingLoad();
 
-            this.CmdTask1Start      = new MVVM_Command(null, this._ExeTask1Start);
-            this.CmdTask2Start      = new MVVM_Command(null, this._ExeTask2Start);
-            this.CmdTask3Start      = new MVVM_Command(null, this._ExeTask3Start);
-            this.CmdTask4Start      = new MVVM_Command(null, this._ExeTask4Start);
-            this.CmdTask5Start      = new MVVM_Command(null, this._ExeTask5Start);
-            this.CmdTask6Start      = new MVVM_Command(null, this._ExeTask6Start);
-            this.CmdTask7Start      = new MVVM_Command(null, this._ExeTask7Start);
-            this.CmdTask8Start      = new MVVM_Command(null, this._ExeTask8Start);
-            this.CmdTask9Start      = new MVVM_Command(null, this._ExeTask9Start);
-            this.CmdTask10Start     = new MVVM_Command(null, this._ExeTask10Start);
-            this.CmdTaskStop        = new MVVM_Command(null, this._ExeTaskStop);
-            this.CmdTimeReset       = new MVVM_Command(null, this._ExeTimeReset);
-            this.CmdCloseApp        = new MVVM_Command(null, this._ExeCloseApp);
+            this.CmdTask1Start      = new ZMVVM_Command(null, this._ExeTask1Start);
+            this.CmdTask2Start      = new ZMVVM_Command(null, this._ExeTask2Start);
+            this.CmdTask3Start      = new ZMVVM_Command(null, this._ExeTask3Start);
+            this.CmdTask4Start      = new ZMVVM_Command(null, this._ExeTask4Start);
+            this.CmdTask5Start      = new ZMVVM_Command(null, this._ExeTask5Start);
+            this.CmdTask6Start      = new ZMVVM_Command(null, this._ExeTask6Start);
+            this.CmdTask7Start      = new ZMVVM_Command(null, this._ExeTask7Start);
+            this.CmdTask8Start      = new ZMVVM_Command(null, this._ExeTask8Start);
+            this.CmdTask9Start      = new ZMVVM_Command(null, this._ExeTask9Start);
+            this.CmdTask10Start     = new ZMVVM_Command(null, this._ExeTask10Start);
+            this.CmdTaskStop        = new ZMVVM_Command(null, this._ExeTaskStop);
+            this.CmdTimeReset       = new ZMVVM_Command(null, this._ExeTimeReset);
+            this.CmdCloseApp        = new ZMVVM_Command(null, this._ExeCloseApp);
 
             for (index = 0; index < 10; index++)
             {
